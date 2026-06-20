@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: 'wip', label: 'Blog', href: '/wip.html' }
   ];
 
-  // --- BUILD MARKUP ---
-
   // Section links for the current page (desktop <li>, mobile <a>)
   const currentSections = pageSections[currentPage] || [];
 

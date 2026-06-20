@@ -165,6 +165,28 @@ function initProjectFilter() {
     });
 }
 /* ─────────────────────────────────────────
+   8. SKILLS COUNTER — auto-calculate totals
+───────────────────────────────────────── */
+function initSkillCounts() {
+    // 1. Select all skill macro-categories
+    const categories = document.querySelectorAll('.skills-category');
+
+    // 2. Loop through each category
+    categories.forEach(category => {
+        // Find how many skill cards belong to this specific category
+        const skillCards = category.querySelectorAll('.skill-card');
+        const count = skillCards.length;
+
+        // Find the <span> element that holds the count badge
+        const countElement = category.querySelector('.skills-category-count');
+
+        // If the element exists, update its text with the calculated count
+        if (countElement) {
+            countElement.textContent = count;
+        }
+    });
+}
+/* ─────────────────────────────────────────
    8. FAVICON
 ───────────────────────────────────────── */
 function initFavicon() {
@@ -187,4 +209,5 @@ document.addEventListener('componentsLoaded', () => {
     initTimelineExpand();
     initActiveNavLink();
     initProjectFilter();
+    initSkillCounts();
 });
