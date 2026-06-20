@@ -1,0 +1,36 @@
+/* ===========================
+   ABOUT
+=========================== */
+#about { background: var(--surface); }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 5rem;
+    align-items: center;
+}
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.about-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+}
+.tag {
+    padding: 0.3rem 0.85rem;
+    background: var(--accent-lt);
+    color: var(--accent);
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+}

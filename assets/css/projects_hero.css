@@ -1,0 +1,44 @@
+/* ===========================
+   HERO — PROJECTS
+=========================== */
+#projects-hero {
+    min-height: 60vh;
+    padding-top: calc(var(--nav-h) + 5rem);
+    padding-bottom: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.08;
+    margin-bottom: 1rem;
+}
+
+/* The signature: counter animated in on hero */
+.projects-count-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+.stat-block { display: flex; flex-direction: column; }
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1;
+}
+.stat-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink-sub);
+    margin-top: 0.25rem;
+}

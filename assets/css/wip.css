@@ -1,0 +1,181 @@
+/* ── Tokens ── */
+:root {
+    --ink:         #0d0d0d;
+    --ink-sub:     #5a5a6e;
+    --canvas:      #f8f8f6;
+    --surface:     #ffffff;
+    --accent:      #2563eb;
+    --accent-lt:   #e0eaff;
+    --green:       #10b981;
+    --green-lt:    #d1fae5;
+    --border:      #e4e4e8;
+    --radius-card: 16px;
+    --radius-pill: 999px;
+    --font-display:'Yusei Magic', sans-serif;
+    --font-body:   'Inter', sans-serif;
+    --nav-h:       68px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-body);
+    background: var(--canvas);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ── Main content ── */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--nav-h) + 3rem) 1.5rem 4rem;
+}
+
+.wip-wrap {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Animated construction icon */
+.wip-icon-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 2rem;
+}
+.wip-icon-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--accent-lt);
+    border-top-color: var(--accent);
+    animation: spin 2.4s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.wip-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accent-lt);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Eyebrow */
+.wip-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+.wip-eyebrow::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--accent);
+}
+.wip-eyebrow::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--accent);
+}
+
+/* Heading */
+.wip-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.wip-desc {
+    font-size: 1rem;
+    color: var(--ink-sub);
+    line-height: 1.75;
+    max-width: 42ch;
+    margin: 0 auto 2.5rem;
+}
+
+/* CTA — back home */
+.wip-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background: var(--ink);
+    color: #fff;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 3rem;
+}
+.wip-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(13,13,13,0.18);
+    color: #fff;
+}
+
+/* Divider */
+.wip-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 2rem;
+}
+
+/* Contact pills */
+.wip-contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+.contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink-sub);
+    transition: border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.contact-pill:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.contact-pill i { font-size: 0.9rem; color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+    .wip-icon-ring { animation: none; border-color: var(--accent); }
+}

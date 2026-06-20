@@ -1,0 +1,181 @@
+/* ===========================
+   NAVBAR
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.nt-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    height: var(--nav-h);
+    background: rgba(248, 248, 246, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+}
+.nt-nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+
+.nt-nav .inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.nt-logo {
+    font-family: 'Ubuntu Mono', 'JetBrains Mono', Consolas, 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--ink);
+    letter-spacing: 0px; 
+}
+.nt-logo span { color: var(--accent); }
+
+.nt-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+}
+
+.nt-links a {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-sub);
+    border-radius: var(--radius-pill);
+    transition: color 0.2s, background 0.2s;
+}
+.nt-links a:hover { color: var(--ink); background: var(--border); }
+
+.btn-resume {
+    padding: 0.45rem 1.25rem;
+    background: var(--ink);
+    color: #fff !important;
+    border-radius: var(--radius-pill);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: opacity 0.2s, transform 0.2s;
+}
+.btn-resume:hover { opacity: 0.85; transform: translateY(-1px); }
+
+/* link pagina corrente */
+.nt-links a.nav-active,
+.nt-links a.nav-active.btn-page {
+    color: var(--ink);
+    font-weight: 700;
+    background: var(--border);
+    border-color: var(--ink);
+}
+
+/* hamburger */
+.nt-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+.nt-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.nt-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nt-hamburger.open span:nth-child(2) { opacity: 0; }
+.nt-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nt-mobile-menu {
+    display: none;
+    position: fixed;
+    inset: var(--nav-h) 0 0 0;
+    background: var(--canvas);
+    z-index: 999;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+}
+.nt-mobile-menu.open { display: flex; }
+.nt-mobile-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+.nt-mobile-menu a:hover { background: var(--border); }
+
+/* separatore verticale tra anchor-links e page-links */
+.nt-sep {
+    width: 1px;
+    height: 18px;
+    background: var(--border);
+    margin: 0 0.25rem;
+    align-self: center;
+}
+
+/* Projects / Blog — outlined, con freccia */
+.nt-links .btn-page {
+    padding: 0.4rem 0.85rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-pill);
+    color: var(--ink-sub);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.nt-links .btn-page:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .nt-hamburger { display: flex; }
+    .nt-links { display: none; }
+}
+
+/* mobile: linea separatrice */
+.nt-mobile-sep {
+    height: 1px;
+    background: var(--border);
+    margin: 0.5rem 1rem;
+}
+
+/* mobile: Projects / Blog con tinta accent */
+.mobile-page-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    border-radius: 10px;
+    color: var(--accent) !important;
+    transition: background 0.2s;
+}
+.mobile-page-link:hover { background: var(--border); }
+
+/* mobile: Resume pill */
+.btn-resume-mobile {
+    display: inline-block;
+    margin: 0.5rem 0 0 1rem;
+    padding: 0.55rem 1.4rem;
+    background: var(--ink);
+    color: #fff !important;
+    border-radius: var(--radius-pill);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
