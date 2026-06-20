@@ -260,11 +260,15 @@
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
     .hero-image-col {
         display: flex;
         justify-content: center;
+        order: -1; /* immagine sopra, testo sotto — stile CV */
+    }
+    .hero-text-col {
+        text-align: center;
     }
     .hero-image-col img {
         width: 140px;
@@ -273,6 +277,12 @@
         aspect-ratio: 1 / 1;
         object-position: center top;
         max-height: unset;
+    }
+    .hero-cta {
+        justify-content: center;
+    }
+    .hero-stats {
+        justify-content: center;
     }
 }
 
