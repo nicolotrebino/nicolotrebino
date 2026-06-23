@@ -126,13 +126,15 @@ function initProjectFilter() {
     const cards = document.querySelectorAll('.project-card');
     if (!cards.length) return; // no project cards on this page, nothing to do
 
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const noResults  = document.getElementById('no-results');
-    const countEl    = document.getElementById('count-total');
+    const filterBtns   = document.querySelectorAll('.filter-btn');
+    const noResults    = document.getElementById('no-results');
+    const filterCount  = document.getElementById('filter-count');   // badge in filter bar
     const filterAnchor = document.getElementById('projects-top');
+    const total        = cards.length;
 
     if (noResults) noResults.style.display = 'none';
-    if (countEl)   countEl.textContent = cards.length;
+    // Hide the filter-count badge initially (showing "All" = no need for extra count)
+    if (filterCount) filterCount.style.display = 'none';
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -152,7 +154,16 @@ function initProjectFilter() {
             });
 
             if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
-            if (countEl)   countEl.textContent = visible;
+
+            // Update the filter-count badge (hide it when "All" is selected)
+            if (filterCount) {
+                if (filter === 'all') {
+                    filterCount.style.display = 'none';
+                } else {
+                    filterCount.textContent = visible + ' of ' + total;
+                    filterCount.style.display = 'inline-flex';
+                }
+            }
 
             // Scroll back to the top of the project list after filtering
             if (filterAnchor) {

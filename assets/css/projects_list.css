@@ -53,6 +53,28 @@
     color: #fff;
 }
 
+/* results count badge — appears in filter bar when a filter is active */
+.filter-count-badge {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-pill);
+    background: var(--accent-lt);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    animation: fadeInBadge 0.2s ease;
+}
+
+@keyframes fadeInBadge {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
 /* ===========================
    PROJECT GRID
 =========================== */
@@ -221,4 +243,74 @@
     opacity: 0.85;
     transform: translateY(-1px);
     color: #fff;
+}
+
+/* ===========================
+   CARD ILLUSTRATION
+   small SVG, top-right, hover-only
+=========================== */
+.card-bg-pattern {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 130px;
+    height: 94px;
+    pointer-events: none;
+    z-index: 0;
+
+    /* colour: accent tint, will be overridden for prize cards */
+    color: var(--accent);
+
+    /* — hidden state — */
+    opacity: 0;
+    transform: scale(0.72) translate(10px, -10px) rotate(8deg);
+    transform-origin: top right;
+    filter: blur(3px);
+
+    transition:
+        opacity  0.42s cubic-bezier(.16,1,.3,1),
+        transform 0.48s cubic-bezier(.16,1,.3,1),
+        filter   0.42s ease;
+}
+
+/* keep card text above the illustration */
+.project-card > *:not(.card-bg-pattern) {
+    position: relative;
+    z-index: 1;
+}
+
+/* — revealed state — */
+.project-card:hover .card-bg-pattern {
+    opacity: 0.20;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+    filter: blur(0);
+}
+
+/* prize cards → warm amber tint */
+.project-card[data-tags*="ai-ml systems"] .card-bg-pattern,
+.project-card:has(.card-icon.prize) .card-bg-pattern {
+    color: #d97706;
+}
+
+/* slightly higher opacity for denser illustrations */
+.project-card:hover .card-bg-pattern svg {
+    filter: drop-shadow(0 0 6px currentColor);
+}
+
+.card-bg-pattern svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-bg-pattern {
+        transition: opacity 0.2s ease;
+        transform: none;
+        filter: none;
+    }
+    .project-card:hover .card-bg-pattern {
+        transform: none;
+        filter: none;
+    }
 }
