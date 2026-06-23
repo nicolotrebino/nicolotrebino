@@ -314,3 +314,31 @@
         filter: none;
     }
 }
+
+/* ===========================
+   TOUCH DEVICES (mobile/tablet)
+   No hover available → show illustration always
+=========================== */
+@media (hover: none) {
+    .card-bg-pattern {
+        opacity: 0.15;
+        transform: scale(1) translate(0, 0) rotate(0deg);
+        filter: blur(0);
+        transition: none;
+    }
+
+    .card-bg-pattern svg {
+        filter: drop-shadow(0 0 6px currentColor);
+    }
+
+    /* disable the lift/shadow on tap since there's no hover */
+    .project-card:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: var(--border);
+    }
+
+    .project-card:hover::before {
+        transform: scaleX(0);
+    }
+}
