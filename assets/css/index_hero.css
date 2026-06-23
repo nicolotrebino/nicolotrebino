@@ -116,6 +116,7 @@
     gap: 0.65rem;
     margin-bottom: 2.5rem;
 }
+/* btn-cv alias kept for back-compat; btn-projects is the current hero CTA */
 .btn-primary-nt {
     display: inline-flex;
     align-items: center;

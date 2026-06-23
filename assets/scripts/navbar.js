@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .map(page => `<a href="${page.href}" class="mobile-page-link">${page.label}</a>`)
     .join('');
 
+  // CV download button — always visible in every page
+  const cvButtonDesktop = `<li><a href="/assets/cv/Nicolo_Trebino_CV.pdf" target="_blank" rel="noopener" class="btn-cv-nav" aria-label="Download CV"><i class="fa-solid fa-file-arrow-down"></i><span>CV</span></a></li>`;
+  const cvButtonMobile  = `<a href="/assets/cv/Nicolo_Trebino_CV.pdf" target="_blank" rel="noopener" class="btn-cv-mobile"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>`;
+
   // Assemble the final navbar markup
   const navbarHTML = `
     <nav class="nt-nav" id="nt-nav">
@@ -57,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
           ${desktopSectionLinks}
           ${desktopSectionLinks && desktopPageLinks ? '<li class="nt-sep" aria-hidden="true"></li>' : ''}
           ${desktopPageLinks}
+          <li class="nt-sep" aria-hidden="true"></li>
+          ${cvButtonDesktop}
         </ul>
 
         <button class="nt-hamburger" id="nt-ham" aria-label="Menu">
@@ -69,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ${mobileSectionLinks}
       ${mobileSectionLinks && mobilePageLinks ? '<div class="nt-mobile-sep" aria-hidden="true"></div>' : ''}
       ${mobilePageLinks}
+      <div class="nt-mobile-sep" aria-hidden="true"></div>
+      ${cvButtonMobile}
     </div>
   `;
 
