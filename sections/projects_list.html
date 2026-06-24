@@ -25,7 +25,173 @@
     <div class="section-inner">
         <div class="projects-grid" id="projects-container">
 
-            <!-- 1. Graph Anonymization -->
+            <!-- 1. Skin Cancer Ablation Study -->
+            <div class="project-card reveal" data-tags="ai-ml data">
+                <div class="card-bg-pattern" aria-hidden="true">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dermoscopy circle (skin lesion) -->
+                        <circle cx="18" cy="40" r="12" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                        <circle cx="18" cy="40" r="6.5" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+                        <circle cx="18" cy="40" r="2.5" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+
+                        <!-- Arrow into network -->
+                        <line x1="30" y1="40" x2="37" y2="40" stroke="currentColor" stroke-width="1" opacity="0.45"/>
+                        <polygon points="37,37.5 41,40 37,42.5" fill="currentColor" opacity="0.45"/>
+
+                        <!-- Input layer (3 nodes) -->
+                        <circle cx="48" cy="26" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="48" cy="40" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="48" cy="54" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+                        <!-- Hidden layer (4 nodes) -->
+                        <circle cx="68" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="68" cy="32" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="68" cy="47" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="68" cy="60" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+                        <!-- Output layer (2 nodes) -->
+                        <circle cx="89" cy="30" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="89" cy="50" r="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+                        <!-- Connections: input → hidden -->
+                        <line x1="51" y1="26" x2="65" y2="19" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="51" y1="26" x2="65" y2="32" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="51" y1="40" x2="65" y2="32" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="51" y1="40" x2="65" y2="47" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="51" y1="54" x2="65" y2="47" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="51" y1="54" x2="65" y2="60" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+
+                        <!-- Connections: hidden → output -->
+                        <line x1="71" y1="19" x2="86" y2="30" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="71" y1="32" x2="86" y2="30" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="71" y1="47" x2="86" y2="50" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+                        <line x1="71" y1="60" x2="86" y2="50" stroke="currentColor" stroke-width="0.65" opacity="0.3"/>
+
+                        <!-- Classification output bars -->
+                        <rect x="96" y="26" width="20" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+                        <rect x="96" y="46" width="13" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+                    </svg>
+                </div>
+
+                <div class="card-top">
+                    <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
+                </div>
+                <div>
+                    <h3 class="card-title">Skin Cancer Ablation Study</h3>
+                </div>
+                <p class="card-desc">
+                    Deep Learning <strong>ablation study</strong> for skin lesion classification.
+                    Compares EfficientNet B3, ResNet 50, DenseNet 121, and a Custom CNN across
+                    preprocessing pipelines, class balancing strategies, and fine-tuning configurations
+                    on the HAM10000 and ISIC datasets.
+                </p>
+                <div class="badges">
+                    <span class="tech-badge"><i class="fa-solid fa-brain"></i> Deep Learning</span>
+                    <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge"><i class="fa-solid fa-database"></i> Kaggle</span>
+                </div>
+                <div class="card-footer-row">
+                    <div class="collab-info"><i class="fa-solid fa-users"></i> UniGe DIBRIS · ML&DA</div>
+                    <a href="https://github.com/FN-Org/SCAS" target="_blank" rel="noopener" class="github-link">
+                        <i class="fab fa-github"></i> Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Cloud Infrastructure -->
+            <div class="project-card reveal" data-tags="cloud">
+                <div class="card-bg-pattern" aria-hidden="true">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cloud shape -->
+                        <path d="M30 52 Q22 52 22 44 Q22 36 30 36 Q30 28 40 28 Q46 22 56 24 Q62 18 72 22 Q82 20 86 30 Q94 30 94 40 Q94 52 82 52 Z"
+                              fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <!-- 3 server nodes below -->
+                        <rect x="18" y="60" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <rect x="50" y="60" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <rect x="82" y="60" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                        <!-- Node dots -->
+                        <circle cx="22" cy="66" r="1.5" fill="currentColor" opacity="0.5"/>
+                        <circle cx="54" cy="66" r="1.5" fill="currentColor" opacity="0.5"/>
+                        <circle cx="86" cy="66" r="1.5" fill="currentColor" opacity="0.5"/>
+                        <!-- Lines from cloud to nodes -->
+                        <line x1="38" y1="52" x2="28" y2="60" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2,2" opacity="0.6"/>
+                        <line x1="58" y1="52" x2="60" y2="60" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2,2" opacity="0.6"/>
+                        <line x1="76" y1="52" x2="92" y2="60" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2,2" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="card-top">
+                    <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+                </div>
+                <div>
+                    <h3 class="card-title">Cloud Infrastructure</h3>
+                </div>
+                <p class="card-desc">
+                    Automated 3-node cluster using Vagrant, Docker Swarm, and Ansible. Deploys Grafana, Prometheus, Loki, Forgejo, and Traefik for a complete simulated cloud environment.
+                </p>
+                <div class="badges">
+                    <span class="tech-badge"><i class="fa-solid fa-circle-nodes"></i> Cluster</span>
+                    <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                    <span class="tech-badge"><i class="fa-solid fa-server"></i> Ansible</span>
+                </div>
+                <div class="card-footer-row">
+                    <div class="collab-info"><i class="fa-solid fa-users"></i> w/ Maurizio Meschi</div>
+                    <a href="https://github.com/MN-UniCode/virtualization-and-cloud-computing" target="_blank" rel="noopener" class="github-link">
+                        <i class="fab fa-github"></i> Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. VR-BLSD -->
+            <div class="project-card reveal" data-tags="ai-ml gamedev">
+                <div class="card-bg-pattern" aria-hidden="true">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- VR Headset outline -->
+                        <rect x="22" y="24" width="76" height="38" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <!-- Nose cutout -->
+                        <path d="M52 62 Q60 70 68 62" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <!-- Left lens -->
+                        <ellipse cx="42" cy="43" rx="12" ry="11" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <!-- Right lens -->
+                        <ellipse cx="78" cy="43" rx="12" ry="11" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <!-- Center bridge -->
+                        <line x1="54" y1="43" x2="66" y2="43" stroke="currentColor" stroke-width="1.1"/>
+                        <!-- Straps left -->
+                        <line x1="22" y1="36" x2="8" y2="34" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="22" y1="52" x2="8" y2="54" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <!-- Straps right -->
+                        <line x1="98" y1="36" x2="112" y2="34" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="98" y1="52" x2="112" y2="54" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <!-- Heart pulse (AED/CPR) inside right lens -->
+                        <polyline points="70,43 73,43 74.5,38 76,48 77.5,40 79,46 80,43 84,43"
+                                fill="none" stroke="currentColor" stroke-width="1.1"
+                                stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="card-top">
+                    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                </div>
+                <div>
+                    <h3 class="card-title">VR-BLSD</h3>
+                </div>
+                <p class="card-desc">
+                    Immersive <strong>VR simulation</strong> for BLSD training. Places users in a cardiac arrest scenario where they practice victim assessment, CPR, and AED usage, guided by a <strong>Conversational AI</strong> instructor with adaptive real-time feedback.
+                </p>
+                <div class="badges">
+                    <span class="tech-badge"><i class="fa-solid fa-gamepad"></i> UE5</span>
+                    <span class="tech-badge"><i class="fa-solid fa-vr-cardboard"></i> Meta Quest</span>
+                    <span class="tech-badge"><i class="fa-solid fa-brain"></i> ConvAI</span>
+                </div>
+                <div class="card-footer-row">
+                    <div class="collab-info"><i class="fa-solid fa-users"></i> w/ Maurizio Meschi</div>
+                    <a href="https://github.com/MN-UniCode/UE_VR_BLSD" target="_blank" rel="noopener" class="github-link">
+                        <i class="fab fa-github"></i> Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Graph Anonymization -->
             <div class="project-card reveal" data-tags="ai-ml data">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -72,65 +238,114 @@
                 </div>
             </div>
 
-            <!-- 2. GliAAns-UI -->
+            <!-- 5. GliAAns-UI -->
             <div class="project-card reveal reveal-delay-1" data-tags="ai-ml">
-            <div class="card-bg-pattern" aria-hidden="true">
-                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 35,45 C 28,45 25,35 30,30 C 28,22 35,15 42,18 C 45,10 58,10 65,15 C 72,10 85,15 88,22 C 95,25 98,35 92,42 C 95,48 90,55 82,52 C 80,58 70,60 65,55 L 62,65 C 58,68 52,65 52,60 L 50,52 C 40,55 35,50 35,45 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-                    
-                    <path d="M 65,55 C 72,60 82,58 82,52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <div class="card-bg-pattern" aria-hidden="true">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 35,45 C 28,45 25,35 30,30 C 28,22 35,15 42,18 C 45,10 58,10 65,15 C 72,10 85,15 88,22 C 95,25 98,35 92,42 C 95,48 90,55 82,52 C 80,58 70,60 65,55 L 62,65 C 58,68 52,65 52,60 L 50,52 C 40,55 35,50 35,45 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                        
+                        <path d="M 65,55 C 72,60 82,58 82,52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
 
-                    <path d="M 35,30 Q 42,35 40,42" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
-                    <path d="M 42,18 Q 45,28 55,25" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
-                    <path d="M 65,15 Q 60,25 65,35" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
-                    <path d="M 88,22 Q 80,28 85,38" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
-                    <path d="M 45,45 Q 60,35 75,42" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M 35,30 Q 42,35 40,42" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M 42,18 Q 45,28 55,25" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M 65,15 Q 60,25 65,35" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M 88,22 Q 80,28 85,38" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M 45,45 Q 60,35 75,42" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
 
-                    <circle cx="68" cy="28" r="9" fill="currentColor" opacity="0.10"/>
-                    <circle cx="68" cy="28" r="9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2"/>
-                    <circle cx="65" cy="25" r="1.4" fill="currentColor" opacity="0.55"/>
-                    <circle cx="71" cy="27" r="1.4" fill="currentColor" opacity="0.55"/>
-                    <circle cx="67" cy="32" r="1.4" fill="currentColor" opacity="0.55"/>
-                    <circle cx="72" cy="31" r="1"   fill="currentColor" opacity="0.40"/>
+                        <circle cx="68" cy="28" r="9" fill="currentColor" opacity="0.10"/>
+                        <circle cx="68" cy="28" r="9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2"/>
+                        <circle cx="65" cy="25" r="1.4" fill="currentColor" opacity="0.55"/>
+                        <circle cx="71" cy="27" r="1.4" fill="currentColor" opacity="0.55"/>
+                        <circle cx="67" cy="32" r="1.4" fill="currentColor" opacity="0.55"/>
+                        <circle cx="72" cy="31" r="1"   fill="currentColor" opacity="0.40"/>
 
-                    <line x1="23" y1="34" x2="97" y2="34" stroke="currentColor" stroke-width="0.7" stroke-dasharray="1,5" opacity="0.30"/>
+                        <line x1="23" y1="34" x2="97" y2="34" stroke="currentColor" stroke-width="0.7" stroke-dasharray="1,5" opacity="0.30"/>
 
-                    <rect x="6"  y="67" width="20" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
-                    <line x1="27" y1="72" x2="35" y2="72" stroke="currentColor" stroke-width="1" opacity="0.50"/>
-                    <path d="M33 69.5 L37 72 L33 74.5" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
-                    <rect x="38" y="67" width="20" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
-                    <line x1="59" y1="72" x2="67" y2="72" stroke="currentColor" stroke-width="1" opacity="0.50"/>
-                    <path d="M65 69.5 L69 72 L65 74.5" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
-                    <rect x="70" y="67" width="20" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
-                    <line x1="91" y1="72" x2="99" y2="72" stroke="currentColor" stroke-width="1" opacity="0.50"/>
-                    <path d="M97 69.5 L101 72 L97 74.5" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
-                    <circle cx="107" cy="72" r="5"   fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
-                    <circle cx="107" cy="72" r="2.2" fill="currentColor" opacity="0.50"/>
-                </svg>
+                        <rect x="6"  y="67" width="20" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
+                        <line x1="27" y1="72" x2="35" y2="72" stroke="currentColor" stroke-width="1" opacity="0.50"/>
+                        <path d="M33 69.5 L37 72 L33 74.5" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
+                        <rect x="38" y="67" width="20" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
+                        <line x1="59" y1="72" x2="67" y2="72" stroke="currentColor" stroke-width="1" opacity="0.50"/>
+                        <path d="M65 69.5 L69 72 L65 74.5" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
+                        <rect x="70" y="67" width="20" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
+                        <line x1="91" y1="72" x2="99" y2="72" stroke="currentColor" stroke-width="1" opacity="0.50"/>
+                        <path d="M97 69.5 L101 72 L97 74.5" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
+                        <circle cx="107" cy="72" r="5"   fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.60"/>
+                        <circle cx="107" cy="72" r="2.2" fill="currentColor" opacity="0.50"/>
+                    </svg>
+                </div>
+                <div class="card-top">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                </div>
+                <div>
+                    <h3 class="card-title">GliAAns-UI</h3>
+                </div>
+                <p class="card-desc">
+                    A cross-platform desktop GUI for the <strong>Pediatric FDOPA Pipeline</strong>.
+                    Automates neuroimaging analysis (PET/MRI) and tumor segmentation using Deep Learning for offline clinical use.
+                </p>
+                <div class="badges">
+                    <span class="tech-badge"><i class="fa-solid fa-brain"></i> Neuroimaging</span>
+                    <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                </div>
+                <div class="card-footer-row">
+                    <div class="collab-info"><i class="fa-solid fa-users"></i> w/ F. G. Garau, N. Trebino</div>
+                    <a href="https://github.com/FN-Org/GliAAns-UI" target="_blank" rel="noopener" class="github-link">
+                        <i class="fab fa-github"></i> Repo
+                    </a>
+                </div>
             </div>
-            <div class="card-top">
-                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-            </div>
-            <div>
-                <h3 class="card-title">GliAAns-UI</h3>
-            </div>
-            <p class="card-desc">
-                A cross-platform desktop GUI for the <strong>Pediatric FDOPA Pipeline</strong>.
-                Automates neuroimaging analysis (PET/MRI) and tumor segmentation using Deep Learning for offline clinical use.
-            </p>
-            <div class="badges">
-                <span class="tech-badge"><i class="fa-solid fa-brain"></i> Neuroimaging</span>
-                <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
-            </div>
-            <div class="card-footer-row">
-                <div class="collab-info"><i class="fa-solid fa-users"></i> w/ F. G. Garau, N. Trebino</div>
-                <a href="https://github.com/FN-Org/GliAAns-UI" target="_blank" rel="noopener" class="github-link">
-                    <i class="fab fa-github"></i> Repo
-                </a>
-            </div>
-        </div>
 
-            <!-- 3. Multimodal Pose Estimation -->
+            <!-- 6. NoSQL-DataFlow -->
+            <div class="project-card reveal reveal-delay-1" data-tags="data cloud">
+                <div class="card-bg-pattern" aria-hidden="true">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cylinder (Cassandra) -->
+                        <ellipse cx="35" cy="22" rx="16" ry="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <line x1="19" y1="22" x2="19" y2="38" stroke="currentColor" stroke-width="1.3"/>
+                        <line x1="51" y1="22" x2="51" y2="38" stroke="currentColor" stroke-width="1.3"/>
+                        <ellipse cx="35" cy="38" rx="16" ry="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <!-- Graph (Neo4j) -->
+                        <circle cx="88" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <circle cx="76" cy="38" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <circle cx="100" cy="38" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <circle cx="88" cy="56" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                        <line x1="88" y1="25" x2="80" y2="33" stroke="currentColor" stroke-width="1"/>
+                        <line x1="88" y1="25" x2="96" y2="33" stroke="currentColor" stroke-width="1"/>
+                        <line x1="80" y1="43" x2="84" y2="51" stroke="currentColor" stroke-width="1"/>
+                        <line x1="96" y1="43" x2="92" y2="51" stroke="currentColor" stroke-width="1"/>
+                        <!-- Flow arrow between the two -->
+                        <path d="M53 30 Q65 30 72 33" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)" stroke-dasharray="3,2"/>
+                        <defs>
+                            <marker id="arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                                <path d="M0,0 L5,2.5 L0,5 Z" fill="currentColor" opacity="0.6"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="card-top">
+                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                </div>
+                <div>
+                    <h3 class="card-title">NoSQL-DataFlow</h3>
+                </div>
+                <p class="card-desc">
+                    Scalable data management system integrating <strong>Cassandra</strong> and <strong>Neo4j Aura</strong>. Automates data extraction from the Hardcover API via Python and is fully containerized with Docker.
+                </p>
+                <div class="badges">
+                    <span class="tech-badge"><i class="fa-solid fa-database"></i> NoSQL</span>
+                    <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                    <span class="tech-badge"><i class="fa-solid fa-diagram-project"></i> Neo4j</span>
+                </div>
+                <div class="card-footer-row">
+                    <div class="collab-info"><i class="fa-solid fa-users"></i> w/ Maurizio Meschi</div>
+                    <a href="https://github.com/MN-UniCode/NoSQL-DataFlow" target="_blank" rel="noopener" class="github-link">
+                        <i class="fab fa-github"></i> Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- 7. Multimodal Pose Estimation -->
             <div class="project-card reveal reveal-delay-2" data-tags="ai-ml">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -187,99 +402,7 @@
                 </div>
             </div>
 
-            <!-- 4. Cloud Infrastructure -->
-            <div class="project-card reveal" data-tags="cloud">
-                <div class="card-bg-pattern" aria-hidden="true">
-                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Cloud shape -->
-                        <path d="M30 52 Q22 52 22 44 Q22 36 30 36 Q30 28 40 28 Q46 22 56 24 Q62 18 72 22 Q82 20 86 30 Q94 30 94 40 Q94 52 82 52 Z"
-                              fill="none" stroke="currentColor" stroke-width="1.5"/>
-                        <!-- 3 server nodes below -->
-                        <rect x="18" y="60" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
-                        <rect x="50" y="60" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
-                        <rect x="82" y="60" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/>
-                        <!-- Node dots -->
-                        <circle cx="22" cy="66" r="1.5" fill="currentColor" opacity="0.5"/>
-                        <circle cx="54" cy="66" r="1.5" fill="currentColor" opacity="0.5"/>
-                        <circle cx="86" cy="66" r="1.5" fill="currentColor" opacity="0.5"/>
-                        <!-- Lines from cloud to nodes -->
-                        <line x1="38" y1="52" x2="28" y2="60" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2,2" opacity="0.6"/>
-                        <line x1="58" y1="52" x2="60" y2="60" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2,2" opacity="0.6"/>
-                        <line x1="76" y1="52" x2="92" y2="60" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2,2" opacity="0.6"/>
-                    </svg>
-                </div>
-                <div class="card-top">
-                    <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
-                </div>
-                <div>
-                    <h3 class="card-title">Cloud Infrastructure</h3>
-                </div>
-                <p class="card-desc">
-                    Automated 3-node cluster using Vagrant, Docker Swarm, and Ansible. Deploys Grafana, Prometheus, Loki, Forgejo, and Traefik for a complete simulated cloud environment.
-                </p>
-                <div class="badges">
-                    <span class="tech-badge"><i class="fa-solid fa-circle-nodes"></i> Cluster</span>
-                    <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
-                    <span class="tech-badge"><i class="fa-solid fa-server"></i> Ansible</span>
-                </div>
-                <div class="card-footer-row">
-                    <div class="collab-info"><i class="fa-solid fa-users"></i> w/ Maurizio Meschi</div>
-                    <a href="https://github.com/MN-UniCode/virtualization-and-cloud-computing" target="_blank" rel="noopener" class="github-link">
-                        <i class="fab fa-github"></i> Repo
-                    </a>
-                </div>
-            </div>
-
-            <!-- 5. NoSQL-DataFlow -->
-            <div class="project-card reveal reveal-delay-1" data-tags="data cloud">
-                <div class="card-bg-pattern" aria-hidden="true">
-                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Cylinder (Cassandra) -->
-                        <ellipse cx="35" cy="22" rx="16" ry="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
-                        <line x1="19" y1="22" x2="19" y2="38" stroke="currentColor" stroke-width="1.3"/>
-                        <line x1="51" y1="22" x2="51" y2="38" stroke="currentColor" stroke-width="1.3"/>
-                        <ellipse cx="35" cy="38" rx="16" ry="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
-                        <!-- Graph (Neo4j) -->
-                        <circle cx="88" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
-                        <circle cx="76" cy="38" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
-                        <circle cx="100" cy="38" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
-                        <circle cx="88" cy="56" r="5" fill="none" stroke="currentColor" stroke-width="1.3"/>
-                        <line x1="88" y1="25" x2="80" y2="33" stroke="currentColor" stroke-width="1"/>
-                        <line x1="88" y1="25" x2="96" y2="33" stroke="currentColor" stroke-width="1"/>
-                        <line x1="80" y1="43" x2="84" y2="51" stroke="currentColor" stroke-width="1"/>
-                        <line x1="96" y1="43" x2="92" y2="51" stroke="currentColor" stroke-width="1"/>
-                        <!-- Flow arrow between the two -->
-                        <path d="M53 30 Q65 30 72 33" fill="none" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)" stroke-dasharray="3,2"/>
-                        <defs>
-                            <marker id="arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
-                                <path d="M0,0 L5,2.5 L0,5 Z" fill="currentColor" opacity="0.6"/>
-                            </marker>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="card-top">
-                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
-                </div>
-                <div>
-                    <h3 class="card-title">NoSQL-DataFlow</h3>
-                </div>
-                <p class="card-desc">
-                    Scalable data management system integrating <strong>Cassandra</strong> and <strong>Neo4j Aura</strong>. Automates data extraction from the Hardcover API via Python and is fully containerized with Docker.
-                </p>
-                <div class="badges">
-                    <span class="tech-badge"><i class="fa-solid fa-database"></i> NoSQL</span>
-                    <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
-                    <span class="tech-badge"><i class="fa-solid fa-diagram-project"></i> Neo4j</span>
-                </div>
-                <div class="card-footer-row">
-                    <div class="collab-info"><i class="fa-solid fa-users"></i> w/ Maurizio Meschi</div>
-                    <a href="https://github.com/MN-UniCode/NoSQL-DataFlow" target="_blank" rel="noopener" class="github-link">
-                        <i class="fab fa-github"></i> Repo
-                    </a>
-                </div>
-            </div>
-
-            <!-- 6. BellApp -->
+            <!-- 8. BellApp -->
             <div class="project-card reveal reveal-delay-2" data-tags="web systems">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -325,7 +448,7 @@
                 </div>
             </div>
 
-            <!-- 7. IoT Bell Controller -->
+            <!-- 9. IoT Bell Controller -->
             <div class="project-card reveal" data-tags="systems">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -377,7 +500,7 @@
                 </div>
             </div>
 
-            <!-- 8. Unreal Engine Chess -->
+            <!-- 10. Unreal Engine Chess -->
             <div class="project-card reveal reveal-delay-1" data-tags="gamedev ai-ml">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -467,7 +590,7 @@
                 </div>
             </div>
 
-            <!-- 9. WikiSAW -->
+            <!-- 11. WikiSAW -->
             <div class="project-card reveal reveal-delay-2" data-tags="web">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -518,7 +641,7 @@
                 </div>
             </div>
 
-            <!-- 10. RIOT-OS Scheduler -->
+            <!-- 12. RIOT-OS Scheduler -->
             <div class="project-card reveal" data-tags="systems">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -567,7 +690,7 @@
                 </div>
             </div>
 
-            <!-- 11. Lisp Interpreter -->
+            <!-- 13. Lisp Interpreter -->
             <div class="project-card reveal reveal-delay-1" data-tags="systems">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
@@ -607,7 +730,7 @@
                 </div>
             </div>
 
-            <!-- 12. Vulnerability Detector — PRIZE -->
+            <!-- 14. Vulnerability Detector — PRIZE -->
             <div class="project-card reveal reveal-delay-2" data-tags="ai-ml systems">
                 <div class="card-bg-pattern" aria-hidden="true">
                     <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
