@@ -217,14 +217,6 @@
     border-top: 1px solid var(--border);
 }
 
-.collab-info {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.75rem;
-    color: var(--ink-sub);
-}
-
 .github-link {
     display: inline-flex;
     align-items: center;
@@ -309,10 +301,6 @@
         transform: none;
         filter: none;
     }
-    .project-card:hover .card-bg-pattern {
-        transform: none;
-        filter: none;
-    }
 }
 
 /* ===========================
@@ -341,4 +329,48 @@
     .project-card:hover::before {
         transform: scaleX(0);
     }
+}
+
+/* ===========================
+   CARD CONTEXT TAGS
+   Unified system for collab-info in card footer.
+   Three variants:
+     .ctx-unige    → university course project (blue tint)
+     .ctx-collab   → built with someone outside uni (neutral)
+     .ctx-personal → solo side project or coaching tool (green tint)
+=========================== */
+
+.collab-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.28rem 0.65rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    border: 1.5px solid transparent;
+    transition: opacity 0.2s;
+}
+
+/* UniGe / academic context → accent blue tint */
+.collab-info.ctx-unige {
+    background: var(--accent-lt);
+    color: var(--accent);
+    border-color: rgba(37,99,235,0.18);
+}
+
+/* External collaborators → neutral ink tint */
+.collab-info.ctx-collab {
+    background: rgba(90, 90, 110, 0.08);
+    color: var(--ink-sub);
+    border-color: var(--border);
+}
+
+/* Personal / Side project → green tint */
+.collab-info.ctx-personal {
+    background: var(--green-lt);
+    color: #065f46;
+    border-color: rgba(16,185,129,0.22);
 }
