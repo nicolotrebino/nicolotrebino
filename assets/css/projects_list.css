@@ -334,10 +334,6 @@
 /* ===========================
    CARD CONTEXT TAGS
    Unified system for collab-info in card footer.
-   Three variants:
-     .ctx-unige    → university course project (blue tint)
-     .ctx-collab   → built with someone outside uni (neutral)
-     .ctx-personal → solo side project or coaching tool (green tint)
 =========================== */
 
 .collab-info {
@@ -361,16 +357,31 @@
     border-color: rgba(37,99,235,0.18);
 }
 
-/* External collaborators → neutral ink tint */
-.collab-info.ctx-collab {
-    background: rgba(90, 90, 110, 0.08);
-    color: var(--ink-sub);
-    border-color: var(--border);
-}
-
 /* Personal / Side project → green tint */
 .collab-info.ctx-personal {
     background: var(--green-lt);
     color: #065f46;
     border-color: rgba(16,185,129,0.22);
+}
+
+/* Live demo link — same row as Repo */
+.live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.4rem 1rem;
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.live-link:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-1px);
 }
